@@ -1,38 +1,179 @@
 .App {
   text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subtitle {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  color: #666;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.input-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.input-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-with-buttons {
+  display: flex;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  gap: 5px;
+}
+
+.input-with-buttons button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: #e91e63;
+}
+
+.input-with-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+.input-with-buttons input {
+  flex-grow: 1;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.radio-group {
+  margin-top: 10px;
+  color: #555;
+}
+
+.results h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.compound-interest-table {
+  width: 100%;
+  border-collapse: collapse;
+  color:#555;
+}
+
+.compound-interest-table th,
+.compound-interest-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: right;
+}
+
+.compound-interest-table th {
+  background-color: #8f96a4;
+  font-weight: lighter;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.compound-interest-table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.custom-tooltip {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.recharts-default-tooltip {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid #ccc !important;
+}
+
+.inputs{
+  flex: 0 0 30%;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.divider {
+  width: 1px;
+  background-color: #e0e0e0;
+  margin: 0 5px;
+}
+
+.results {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.calculator {
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+}
+
+.highlight-color{
+  color: #666;
+}
+
+
+@media (max-width: 768px) {
+  .calculator {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+  }
+
+  .inputs,
+  .results {
+    width: 100%;
+    padding: 0;
+  }
+
+  .results-header {
+    margin-bottom: 0px;
+  }
+
+  .recharts-wrapper {
+    height: 250px !important;
+  }
+
+  .recharts-legend-wrapper, .recharts-wrapper{
+    width: auto !important;
   }
 }
